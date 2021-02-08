@@ -13,7 +13,7 @@ It consists of various modules that aids penetration testing operations:
 * creds - modules designed to test credentials against network services
 * scanners - modules that check if a target is vulnerable to any exploit
 * payloads - modules that are responsible for generating payloads for various architectures and injection points
-* generic - modules that perform generic attacks 
+* generic - modules that perform generic attacks
 
 # Installation
 
@@ -27,7 +27,11 @@ Required:
 * pycrypto
 
 Optional:
-* bluepy - bluetooth low energy 
+* bluepy - bluetooth low energy
+
+#### Additional requirements for Windows:
+* pyreadline (replacement for linux's readline module)
+* colorama (makes colored output can be displayed on Windows's command prompt)
 
 ## Installation on Kali Linux
 
@@ -93,6 +97,15 @@ sudo python3 -m pip install -r requirements.txt
 python3 rsf.py
 ```
 
+## Installation on Windows
+
+```
+git clone https://github.com/threat9/routersploit
+cd routersploit
+python3 -m pip install -r requirements.txt
+python3 setup.py install
+```
+
 ## Running on Docker
 
 ```
@@ -112,17 +125,17 @@ git pull
 ```
 
 # Build your own
-To our surprise people started to fork 
-[routersploit](https://github.com/threat9/routersploit) not because they were 
-interested in the security of embedded devices but simply because they want to 
-leverage our interactive shell logic and build their own tools using similar 
-concept. All these years they must have said: _"There must be a better way!"_ 
-and they were completely right, the better way is called 
+To our surprise people started to fork
+[routersploit](https://github.com/threat9/routersploit) not because they were
+interested in the security of embedded devices but simply because they want to
+leverage our interactive shell logic and build their own tools using similar
+concept. All these years they must have said: _"There must be a better way!"_
+and they were completely right, the better way is called
 [_Riposte_](https://github.com/fwkz/riposte).
 
-[_Riposte_](https://github.com/fwkz/riposte) allows you to easily wrap your 
-application inside a tailored interactive shell. Common chores regarding 
-building REPLs was factored out and being taken care of so you can really 
+[_Riposte_](https://github.com/fwkz/riposte) allows you to easily wrap your
+application inside a tailored interactive shell. Common chores regarding
+building REPLs was factored out and being taken care of so you can really
 focus on specific domain logic of your application.
 # License
 
